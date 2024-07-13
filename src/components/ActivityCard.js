@@ -8,7 +8,7 @@ import study from '../assets/icon-study.svg';
 import work from '../assets/icon-work.svg';
 import '../styles/ActivityCard.css';
 
-function ActivityCard({ title, hours, lastWeek, color, timeframe }) {
+function ActivityCard({ title, currentHours, previousHours, color, timeframe }) {
   const iconMap = {
     Work: work,
     Play: play,
@@ -19,6 +19,19 @@ function ActivityCard({ title, hours, lastWeek, color, timeframe }) {
   };
 
   const iconSrc = iconMap[title] || '';
+
+  const getPreviousTimeframe = () => {
+    switch(timeframe) {
+      case 'daily':
+        return 'Yesterday';
+      case 'weekly':
+        return 'Last Week';
+      case 'monthly':
+        return 'Last Month';
+      default:
+        return '';
+    }
+  }
 
   return (
     <div className="activity-card">
@@ -31,8 +44,8 @@ function ActivityCard({ title, hours, lastWeek, color, timeframe }) {
           <img src={ellipsis} alt="More" className="more-button" />
         </div>
         <div className="activity-time">
-          <h2>{hours}hrs</h2>
-          <p>Last {timeframe} - {lastWeek}hrs</p>
+          <h2>{currentHours}hrs</h2>
+          <p>{getPreviousTimeframe()} - {previousHours}hrs</p>
         </div>
       </div>
     </div>
