@@ -4,7 +4,6 @@
     overflow: hidden;
     width: 250px;
   }
-
   .profile-info {
     background-color: hsl(246, 80%, 60%);
     padding: 30px;
@@ -15,7 +14,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-
   .profile-image {
     width: 70px;
     height: 70px;
@@ -23,24 +21,20 @@
     border: 3px solid white;
     margin-bottom: 40px;
   }
-
   .profile-text {
     color: white;
     text-align: left;
   }
-
   .report-for {
     font-size: 0.8rem;
     font-weight: 300;
     margin-bottom: 5px;
   }
-
   .profile-name {
     font-size: 1.5rem;
     font-weight: 300;
     margin: 0;
   }
-
   .timeframe-selector {
     background-color: hsl(235, 46%, 20%);
     padding: 20px 30px;
@@ -48,7 +42,6 @@
     width: 100%;
     box-sizing: border-box;
   }
-
   .timeframe-selector button {
     display: block;
     background: none;
@@ -62,40 +55,34 @@
     width: 100%;
     transition: color 0.3s ease;
   }
-
   .timeframe-selector button:last-child {
     margin-bottom: 0;
   }
-
   .timeframe-selector button:hover,
   .timeframe-selector button.active {
     color: white;
   }
-
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .profile-card {
       width: 100%;
+      max-width: 400px;
     }
-
     .profile-info {
       flex-direction: row;
       align-items: center;
       padding: 20px;
     }
-
     .profile-image {
       margin-bottom: 0;
       margin-right: 20px;
       width: 60px;
       height: 60px;
     }
-
     .timeframe-selector {
       display: flex;
       justify-content: space-between;
       padding: 15px 20px;
     }
-
     .timeframe-selector button {
       margin-bottom: 0;
       width: auto;
