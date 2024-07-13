@@ -3,13 +3,13 @@
     border-radius: 15px;
     overflow: hidden;
     position: relative;
-    width: 220px; /* Increased width */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 260px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
   .activity-card:hover .activity-content {
-    background-color: hsl(235, 40%, 25%); /* Lighter version on hover */
+    background-color: hsl(235, 40%, 25%);
   }
 
   .activity-background {
@@ -58,7 +58,7 @@
   }
 
   .activity-time {
-    text-align: left; /* Justify content to the left */
+    text-align: left;
   }
 
   .activity-time h2 {
@@ -72,4 +72,34 @@
     font-size: 14px;
     color: hsl(236, 100%, 87%);
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .activity-card {
+      width: 100%;
+      height: auto;
+    }
+
+    .activity-content {
+      padding: 20px;
+    }
+
+    .activity-header {
+      margin-bottom: 10px;
+    }
+
+    .activity-time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .activity-time h2 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .activity-time p {
+      font-size: 12px;
+    }
   }
