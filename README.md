@@ -27,8 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Live Site URL: https://fmttdashboard.netlify.app/
 
 ## My process
 
